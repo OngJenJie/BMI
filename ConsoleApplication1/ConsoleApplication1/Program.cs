@@ -11,15 +11,23 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            // 宣告變數
             string result = "";
             double BMI;
+
+            // 收取資料（身高跟體重）
             Console.Title = "BMI计算器";
             Console.WriteLine("請輸入您的身高：");
             string heigh = Console.ReadLine();
             Console.WriteLine("請輸入您的体重:");
             string weight = Console.ReadLine();
+
+            // BMI 計算
+
             double hh = double.Parse(heigh) * double.Parse(heigh);
             BMI = double.Parse(weight) / hh ;
+
+            // 判斷體位
             if(BMI<16.5)
             {
             result = "免役體位";
@@ -40,8 +48,10 @@ namespace ConsoleApplication1
             {
                 result = "免役體位";
             }
-            Console.WriteLine("您的BMI值是: " + BMI + "您的體位是：" + result);
-            Console.ReadLine();
+
+            // 輸出結果
+            Console.WriteLine("您的BMI值是: {0:0} 您的體位是： {1}",BMI , result);
+            Console.ReadKey();
         }
 
     }
