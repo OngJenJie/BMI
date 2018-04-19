@@ -22,9 +22,9 @@ namespace ConsoleApplication1
             Console.WriteLine("請輸入您的体重:");
             string weight = Console.ReadLine();
 
-            // BMI 計算
-
-            double hh = double.Parse(heigh) * double.Parse(heigh);
+            // BMI 計算 
+            double mheigh = double.Parse(heigh) / 100;
+            double hh = mheigh * mheigh;
             BMI = double.Parse(weight) / hh ;
 
             // 判斷體位
@@ -50,7 +50,7 @@ namespace ConsoleApplication1
             }
 
             // 輸出結果
-            Console.WriteLine("您的BMI值是: {0:0} 您的體位是： {1}",BMI , result);
+            Console.WriteLine("您的BMI值是: {0:00} 您的體位是： {1}",BMI , result);
             Console.ReadKey();
         }
 
